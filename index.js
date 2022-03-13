@@ -1,7 +1,7 @@
 const express=require('express');
 const cookieParser=require('cookie-parser');
 const app = express();
-const port= process.env.port || 8000;
+const port= process.env.PORT || 8000;
 const db=require('./config/mongoose');
 const googlestt=require('./config/passport-google-oauth2-strategy');
 const passport = require('passport');
