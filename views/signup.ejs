@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+    <h5>signup page</h5>
+    <form action="/users/createme" method="POST">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="phone" maxlength="10" pattern="\d{10}" placeholder="Phone Number" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="cpassword" placeholder="Confirm Password" required>
+        <input type="submit" value="signup">
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title><%=title%></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/css/login1.css">
+	<link rel="stylesheet" type="text/css" href="/css/login2.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100" style="padding-top: 50px !important;">
+				<form class="login100-form validate-form" action="/users/createme" method="POST">
+					<div class="container" style="margin-bottom:20px !important ; margin-top: 0px !important;">
+						<%if(isAdded!=''){%>
+							 <div class="alert alert-warning alert-dismissible fade in" style="background-color: #f2f2f2 !important;" >
+								<a href="/users/signin" class="close" data-dismiss="alert" aria-label="close" ><p style="font-size: 15px !important;">&times;</p></a>
+									<p><strong>Error!</strong> <%=isAdded%></p>
+							</div>  
+						
+							
+						
+						<%}%>
+					</div>
+					<span class="login100-form-title p-b-30">
+						Expengement
+					</span>
+				
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="email" name="email" required>
+						<span class="focus-input100" data-placeholder="Email" ></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Valid Name is: John Mark">
+						<input class="input100" type="text" name="name" required>
+						<span class="focus-input100" data-placeholder="Name" ></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "must be of 10 digits">
+						<input class="input100" type="text" name="phone" maxlength="10" pattern="\d{10}" required>
+						<span class="focus-input100" data-placeholder="Phone No." ></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="password" required>
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Signup
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-20" >
+						<span class="txt1">
+							Already Registered?
+						</span>
+
+						<a class="txt2" href="/users/signin">
+							Sign In
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+ 
+<!--===============================================================================================-->
+	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/bootstrap/js/popper.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="/js/login.js"></script>
+
+
+
+</body>
+</html>

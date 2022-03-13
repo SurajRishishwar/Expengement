@@ -1,0 +1,135 @@
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <style>
+           
+            @media (max-width: 480px) {
+                .container{
+                    margin-top: 100px !important;
+                }
+            }
+        </style>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title><%=title%></title>
+        <!-- <link rel="icon" type="image/png" href="/img/Flub_New3-01.png"/> -->
+        <meta name="description" content="Track Your All Expenses and Income at one Place." /> 
+        <link rel="stylesheet" href="/css/Form.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+        <!--Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="stylesheet" href="/css/default.css" id="theme-color">
+    </head>
+    <body>
+
+        <!--navigation-->
+        <!-- <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation" style="background-color: #f2f2f2 !important;">
+            <a class="navbar-brand mx-auto" href="/">
+                Expengement
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/homeinside">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/details">History</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/logout">Logout</a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </nav> -->
+
+        
+
+
+        <!--services section-->
+        <section style="padding-bottom: 0 !important; " >
+            <div class="container" style=" padding-top: 10px !important; margin-bottom: 0px !important; ">
+                <div class="row">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h2>You can improve your experience by updating your profile</h2>
+                        <div class="divider bg-primary mx-auto"></div>
+                    
+                    </div>
+                </div>
+          
+                    <!-- <div class="title"> </div> -->
+                    <div class="content">
+                        <form action="/users/updatemy" method="POST">
+                            <div class="user-details">
+                               
+                                <div class="input-box mb-4">
+                                    <span class="details mb-2">Full Name</span>
+                                    
+                                    <input type="name" name="name" value="<%=profile.name%>" placeholder="Enter your Name" required>
+                                </div>
+                                <input type="hidden" name="user" value="<%=profile.id%>" required>
+                               
+                                <div class="input-box mb-4">
+                                    <span class="details">Phone Number</span>
+                                  
+                                    <input type="text" name="phone"  maxlength="10" pattern="\d{10}" value="<%=profile.phone%>" placeholder="Enter your number" required>
+                                </div>
+                               
+                               
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Submit">
+                            </div>
+                            <!-- <div class="button">
+                                <a href="/users/updateprofile">Update</a>
+                            </div> -->
+                        </form>
+                    </div>
+               
+
+               
+            </div>
+            
+        </section>
+
+
+     
+
+   
+
+     
+
+       
+       
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script>
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+        <script src="/js/scripts.js"></script>
+        
+    </body>
+</html>

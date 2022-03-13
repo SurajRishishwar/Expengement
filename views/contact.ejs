@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title><%=title%></title>
+        <link rel="icon" type="image/png" href="/img/Flub_New3-01.png"/>
+        <meta name="description" content="Union is a beautiful Bootstrap 4 template for multipurpose landing pages." /> 
+
+        <!--Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="stylesheet" href="/css/default.css" id="theme-color">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
+            <a class="navbar-brand mx-auto" href="index.html">
+                Expengement
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="align-center"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/homeinside">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/details">History</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/profile">Profile</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/logout">Log Out</a>
+                    </li>
+
+                   
+                    
+                </ul>
+                <!-- <form class="form-inline">
+                    <p class="mb-0 mx-3"><a class="page-scroll font-weight-bold" href="#footer">Work with us</a></p>
+                </form> -->
+            </div>
+        </nav>
+          <!--contact section-->
+          <section class="py-6" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto text-center">
+                        <h2>You will surely hear back from us if you write to us</h2>
+                        <div class="divider bg-primary mx-auto"></div>
+                    
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-8 mx-auto">
+                        <form method="POST" action="/users/contactmsg">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" value="<%=profile.name%>" class="form-control" placeholder="Your name">
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="tel" name="Mobile no." value="<%=profile.phone%>"  class="form-control" placeholder="Phone number">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" name="email" value="<%=profile.email%>" disabled  class="form-control" placeholder="Your email address">
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="city" value="<%=profile.city%>, <%=profile.stateut%>"  class="form-control" placeholder="Your City">
+                                    </div>
+                                </div> -->
+                                <input type="hidden" name="userid" value="<%=profile.id%>">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea rows="5" name="msg"  class="form-control" placeholder="What are you looking for?" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3" >
+                                <button class="btn btn-primary" >Send your message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+              <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script>
+              <script src="/js/scripts.js"></script>
+          </body>
+      </html>
